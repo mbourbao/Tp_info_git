@@ -1,0 +1,15 @@
+FROM pandoc/latex:latest
+
+RUN apk update && apk add bash
+RUN mkdir /docs
+WORKDIR /docs
+
+COPY . /docs
+RUN mkdir log
+RUN chmod +x start.sh
+VOLUME /docs/log
+ENTRYPOINT ["/bin/sh","./start.sh"]
+
+
+ 
+
