@@ -1,9 +1,10 @@
 FROM pandoc/latex:latest
 
-ADD convert_md.sh
+COPY . /usr/src/convert_md
 # règle le répertoire de travail
-WORKDIR /usr/src/convert
+WORKDIR /usr/src/convert_md
 
-RUN /convert_md.sh
+RUN chmod +x convert_md.sh
+
 
 ENTRYPOINT ["./convert_md.sh"]
