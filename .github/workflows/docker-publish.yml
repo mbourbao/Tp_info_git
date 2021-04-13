@@ -8,8 +8,9 @@ jobs:
     steps:
       - uses: docker://pandoc/core:2.9
         with:
-          args: echo "pandoc --pdf-engine=xelatex -s rapport.md -o rapport.pdf" >> output
-
+          args:  "pandoc --pdf-engine=xelatex -s rapport.md -o rapport.pdf" 
+      - run : rapport.md.pdf >> output
+        
       - uses: actions/upload-artifact@master
         with:
           name: output
