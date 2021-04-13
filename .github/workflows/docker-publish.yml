@@ -9,7 +9,7 @@ jobs:
       - uses: docker://pandoc/core:2.9
         with:
           args:  "pandoc --pdf-engine=xelatex -s rapport.md -o rapport.pdf" 
-      - run : rapport.md.pdf >> output
+      - run : cp ./rapport.md.pdf/rapport output/rapport.pdf
         
       - uses: actions/upload-artifact@master
         with:
