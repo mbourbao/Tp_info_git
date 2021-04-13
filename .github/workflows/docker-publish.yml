@@ -3,9 +3,19 @@ name: Advanced Usage
 on: push
 
 jobs:
+
+  test:
+    runs-on: self-hosted
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
+    
+    
+  
+    
       - uses: actions/checkout@v2
       - run: |
           mkdir output  # create output dir
