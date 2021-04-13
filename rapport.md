@@ -527,5 +527,5 @@ vrais indices sont différents des faux indices, trouver l'indice final !
 
 #### Vous avez trouvé tous les indices ####
 
-🎉 Félicitations ! 🥳
+ Félicitations ! 
 		
