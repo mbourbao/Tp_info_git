@@ -4,13 +4,14 @@ on: push
 
 jobs:
 
+      
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
   test:
     runs-on: self-hosted
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       
-  convert_via_pandoc:
-    runs-on: ubuntu-18.04
     steps:
     
     
